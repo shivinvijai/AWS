@@ -1,0 +1,17 @@
+"_comment": "Tag based instance creation created by Shivin Vijai"
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "EC2CreateInstanceWithTag",
+            "Effect": "Deny",
+            "Action": "ec2:RunInstances",
+            "Resource": "arn:aws:ec2:us-east-1:876380705844:instance/*",
+            "Condition": {
+                "StringNotLike": {
+                    "aws:RequestTag/environment": "*"
+                }
+            }
+        }
+    ]
+}
