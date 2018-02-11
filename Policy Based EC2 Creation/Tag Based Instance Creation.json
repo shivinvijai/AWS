@@ -5,7 +5,7 @@
             "Sid": "EC2CreateInstanceWithTag",
             "Effect": "Deny",
             "Action": "ec2:RunInstances",
-            "Resource": "arn:aws:ec2:us-east-1:876380705844:instance/*",
+            "Resource": "arn:aws:ec2:us-east-1:{your-aws-account-id}:instance/*",
             "Condition": {
                 "StringNotLike": {
                     "aws:RequestTag/environment": "*"
